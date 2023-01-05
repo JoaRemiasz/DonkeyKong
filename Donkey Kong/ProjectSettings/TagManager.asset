@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Objective
   - Obstacle
+  - Hammer
+  - moneta
   layers:
   - Default
   - TransparentFX

@@ -148,6 +148,15 @@ public class Player : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "moneta")
+        {
+            // Zbierz monetê i zwiêksz wynik gracza
+            ScoreScript.scoreValue += 100;
+            Destroy(other.gameObject);
+        }
+    }
     // Funkcja wywo³ywana, gdy obiekt "Mario" wchodzi w kolizjê z obiektem "M³otek"
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -181,6 +190,7 @@ public class Player : MonoBehaviour
             StartCoroutine(TakeHammerFromMario());
            
         }
+
 
     }
     public IEnumerator TakeHammerFromMario()
