@@ -908,7 +908,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.07, y: -0.04}
+  m_AnchoredPosition: {x: -0.35, y: -0.51}
   m_SizeDelta: {x: 800, y: 557.9596}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &930497171
@@ -2544,7 +2544,31 @@ PrefabInstance:
     - target: {fileID: 4929584073299230356, guid: bee1f3c5268c99442a8451ef8ca798a0, type: 3}
       propertyPath: hammerSprites
       value: 
-      objectReference: {fileID: 21300000, guid: 844077ab4b898a24bb8bcd4049d19d77, type: 3}
+      objectReference: {fileID: -372115332, guid: a396c260523af3246b61d9a501358448, type: 3}
+    - target: {fileID: 4929584073299230356, guid: bee1f3c5268c99442a8451ef8ca798a0, type: 3}
+      propertyPath: hammerSprites.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4929584073299230356, guid: bee1f3c5268c99442a8451ef8ca798a0, type: 3}
+      propertyPath: hammerSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 716790833, guid: a396c260523af3246b61d9a501358448, type: 3}
+    - target: {fileID: 4929584073299230356, guid: bee1f3c5268c99442a8451ef8ca798a0, type: 3}
+      propertyPath: hammerSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: -2024385705, guid: a396c260523af3246b61d9a501358448, type: 3}
+    - target: {fileID: 4929584073299230356, guid: bee1f3c5268c99442a8451ef8ca798a0, type: 3}
+      propertyPath: hammerSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 625007808, guid: a396c260523af3246b61d9a501358448, type: 3}
+    - target: {fileID: 4929584073299230356, guid: bee1f3c5268c99442a8451ef8ca798a0, type: 3}
+      propertyPath: hammerSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 1233752332, guid: a396c260523af3246b61d9a501358448, type: 3}
+    - target: {fileID: 4929584073299230356, guid: bee1f3c5268c99442a8451ef8ca798a0, type: 3}
+      propertyPath: hammerSprites.Array.data[4]
+      value: 
+      objectReference: {fileID: -372115332, guid: a396c260523af3246b61d9a501358448, type: 3}
     - target: {fileID: 4929584073299230367, guid: bee1f3c5268c99442a8451ef8ca798a0, type: 3}
       propertyPath: m_Name
       value: Mario

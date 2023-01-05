@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
     private bool isImmortal = false;
 
     public Animator animator;
-    public Sprite hammerSprites;
+    public Sprite[] hammerSprites;
 
 
     private void Awake()
@@ -127,7 +127,23 @@ public class Player : MonoBehaviour
         }
         if (isImmortal)
         {
-            spriteRenderer.sprite = hammerSprites;
+            if (climbing)
+            {
+                spriteRenderer.sprite = climbSprite;
+            }
+            else if (direction.x != 0f)
+            {
+                spriteIndex++;
+
+                if (spriteIndex >= hammerSprites.Length)
+                {
+                    spriteIndex = 0;
+                }
+
+                spriteRenderer.sprite = hammerSprites[spriteIndex];
+                spriteRenderer.sprite = hammerSprites[spriteIndex++];
+
+            }
 
         }
     }
