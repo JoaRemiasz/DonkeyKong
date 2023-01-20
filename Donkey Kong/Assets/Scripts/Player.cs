@@ -10,21 +10,21 @@ public class Player : MonoBehaviour
     public Sprite climbSprite;
     private int spriteIndex;
 
-    private new Rigidbody2D rigidbody;
+    public new Rigidbody2D rigidbody;
     private new Collider2D collider;
 
     private Collider2D[] overlaps = new Collider2D[4];
-    private Vector2 direction;
+    public Vector2 direction;
 
-    private bool grounded;
-    private bool climbing;
+    public bool grounded;
+    public bool climbing;
 
     public float moveSpeed = 3f;
     public float jumpStrength = 4f;
     private bool isImmortal = false;
 
-    public Animator animator;
     public Sprite[] hammerSprites;
+
 
 
     private void Awake()
@@ -80,7 +80,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void SetDirection()
+    public void SetDirection()
     {
         if (climbing) {
             direction.y = Input.GetAxis("Vertical") * moveSpeed;
@@ -91,6 +91,7 @@ public class Player : MonoBehaviour
         }
 
         direction.x = Input.GetAxis("Horizontal") * moveSpeed;
+
 
         // Prevent gravity from building up infinitely
         if (grounded) {

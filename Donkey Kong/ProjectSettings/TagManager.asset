@@ -8,6 +8,8 @@ TagManager:
   - Obstacle
   - Hammer
   - moneta
+  - right
+  - left
   layers:
   - Default
   - TransparentFX
