@@ -3,31 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class JumpMovie : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+public class DownMovie : MonoBehaviour, IPointerDownHandler
 {
-    public float jumpStrength = 4f;
+    public float moveSpeed = 5f;
     public Player player;
-    public bool jumping = false;
+    public bool climbing = false;
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (player.grounded)
+        if (player.climbing)
         {
-            jumping = true;
+            climbing = true;
         }
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        jumping = false;
+        climbing = false;
     }
 
     void FixedUpdate()
     {
-        if (jumping)
+        if (climbing)
         {
-            player.direction = Vector2.up * jumpStrength;
-            jumping = false;
+            player.direction.y = -moveSpeed;
+            climbing = false;
+
         }
     }
 }

@@ -10,6 +10,7 @@ TagManager:
   - moneta
   - right
   - left
+  - Up
   layers:
   - Default
   - TransparentFX
